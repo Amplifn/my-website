@@ -18,6 +18,10 @@ button {
     opacity: 90%;
 }
 
+button:hover {
+    color: #FF0000;
+}
+
 html, body {
     size: 100%;
     padding: 0;
