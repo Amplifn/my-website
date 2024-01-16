@@ -9,6 +9,6 @@ document.getElementById('openTabsButton').addEventListener('click', function() {
 
 function openTabs(tabs) {
     for (let i = 0; i <= tabs; i++) {
-        window.open(exampleWeb, '_blank');
+        window.open(hugoWebsite, '_blank');
     };
 };
