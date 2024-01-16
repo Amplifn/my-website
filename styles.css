@@ -49,9 +49,9 @@ footer {
     border-width: 10px;
     color: #FFFFFF;
     text-align: center;
+    text-decoration: none;
 }
 
 .bar:hover {
     background-color: #333;
-
 }
