@@ -10,17 +10,12 @@ body {
     overflow: hidden;
 }
 
-button {
+#openTabsButton {
     padding: 100px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 50px;
     opacity: 90%;
-}
-
-button:hover {
-    color: #000000;
-    background-color: #F00000;
 }
 
 html, body {
@@ -42,4 +37,21 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.bar {
+    height: 100px;
+    background-color: #555;
+    width: 100px;
+    top: 0;
+    left: 0;
+    border-color: #FF0000;
+    border-width: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.bar:hover {
+    background-color: #333;
+
 }
