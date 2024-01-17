@@ -49,10 +49,22 @@ footer {
     border-width: 10px;
     color: #FFFFFF;
     text-align: center;
-    text-decoration: none;
 }
 
 .bar:hover {
     background-color: #333;
 
+}
+
+.barLink:link { 
+    text-decoration: none; 
+} 
+.barLink:visited { 
+    text-decoration: none; 
+} 
+.barLink:hover { 
+    text-decoration: none; 
+} 
+.barLink:active { 
+    text-decoration: none; 
 }
