@@ -1,0 +1,13 @@
+button {
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+  color: #000000;
+}
+
+.upgrade {
+  background-color: #0000FF; 
+  color: #FFFFFF;
+}
