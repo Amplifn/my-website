@@ -8,8 +8,9 @@ const autoClickerText = document.querySelector("#autoClickerText");
 let count = 0;
 let countIncrement = 1;
 let incrementCost = 10;
-let autoClicksPerSecond = 0.5;
+let autoClicksPerSecond = 0;
 let autoClickCost = 30;
+let autoClickInterval;
 
 incrementButton.onclick = function() {
   if (count >= incrementCost) {
@@ -27,7 +28,7 @@ pointButton.onclick = function() {
 
 autoClickerButton.onclick = function() {
   if (count >= autoClickCost) {
-    autoClicksPerSecond += 0.5;
+    autoClicksPerSecond += 1;
     count -= autoClickCost;
     autoClickCost *= 1.5;
     update()
@@ -40,11 +41,16 @@ function update() {
   pointCount.innerText = "Points: " + count;
   incrementButton.innerText = "Increment: " + countIncrement;
   incrementCostText.innerText = "Cost: " + incrementCost;
-  autoClickerButton.innerText = "Clicks per second: " + autoClicksPerSecond;
+  autoClickerButton.innerText = "Points per second: " + countIncrement * autoClicksPerSecond;
   autoClickerText.innerText = "Cost: " + autoClickCost;
 };
 
-setInterval(function() {
-    count += countIncrement;
-    update()
-  }, 1000 * (1 / autoClicksPerSecond));
+function autoClickIntervalFunc() {
+  clearInterval(autoClickInterval);
+  autoClickInterval = setInterval(function() {
+    count += countIncrement * autoClicksPerSecond;
+    update();
+  }, 1000);
+};
+
+autoClickIntervalFunc()
