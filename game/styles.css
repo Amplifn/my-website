@@ -5,9 +5,18 @@ button {
 
 h1 {
   color: #000000;
+  margin-left: 2%;
 }
 
 .upgrade {
   background-color: #0000FF; 
   color: #FFFFFF;
 }
+
+.container {
+  display: flex;
+  margin: 2%;
+  background-color: yellow;
+  border: 3px solid #333;
+}
+
