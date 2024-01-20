@@ -60,7 +60,7 @@ criticalClickButton.onclick = function() {
   if (count >= criticalClickCost && criticalClickChance > 1) {
     count -= criticalClickCost;
     criticalClickChance /= 2;
-    criticalClickCost *= 50;
+    criticalClickCost *= 5;
   }
   update();
 };
