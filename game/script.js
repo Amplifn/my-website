@@ -17,8 +17,8 @@ function debugMode(bool) {
     autoClickInterval;
     criticalClickChance = 100;
     criticalClickCost = 1;  
-  }
-}
+  };
+};
 
 let count = 0;
 let countIncrement = 1;
@@ -28,9 +28,6 @@ let autoClickCost = 30;
 let autoClickInterval;
 let criticalClickChance = 100;
 let criticalClickCost = 200;
-
-debugMode(false);
-
 
 incrementButton.onclick = function() {
   if (count >= incrementCost) {
@@ -76,7 +73,7 @@ function update() {
   incrementCostText.innerText = "Cost: " + incrementCost;
   autoClickerButton.innerText = "Points per second: " + countIncrement * autoClicksPerSecond;
   autoClickerText.innerText = "Cost: " + autoClickCost;
-  criticalClickButton.innerText = criticalClickChance < 1 ? "Critical click chance: 100%" : "Critical click chance: " + (1 / criticalClickChance * 100) + "%" ;
+  criticalClickButton.innerText = criticalClickChance < 1 ? "Critical click chance: 100%" : "Critical click chance: " + (1 / criticalClickChance * 100) + "%";
   criticalClickText.innerText = criticalClickChance < 1 ? "" : "Cost: " + criticalClickCost;
 };
 
@@ -89,7 +86,8 @@ function autoClickIntervalFunc() {
 };
 
 function randomNumber(x, y) {
-  return Math.floor(x + (y - x + 1) * Math.random())
-}
+  return Math.floor(x + (y - x + 1) * Math.random());
+};
 
-autoClickIntervalFunc()
+autoClickIntervalFunc();
+debugMode(false);
