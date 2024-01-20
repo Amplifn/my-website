@@ -8,6 +8,14 @@ h1 {
   color: #FFFFFF;
 }
 
+.upgrade:hover {
+  background-color: #4343ff; 
+}
+
+.upgrade:active {
+  background-color: #0000FF; 
+}
+
 .container {
   display: flex;
   margin: 2%;
@@ -24,10 +32,12 @@ button {
 
 button:hover {
   border-color: #FFFFFF;
+  background-color: #777;
 }
 
 button:active {
-  background-color: #dfdfdf
+  background-color: #555;
+  
 }
 
 body {
