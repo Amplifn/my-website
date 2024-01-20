@@ -22,7 +22,7 @@ function debugMode(bool) {
 
 let count = 0;
 let countIncrement = 1;
-let incrementCost = 10;
+let incrementCost = 100;
 let autoClicksPerSecond = 0;
 let autoClickCost = 30;
 let autoClickInterval;
@@ -33,7 +33,7 @@ incrementButton.onclick = function() {
   if (count >= incrementCost) {
     countIncrement++;
     count -= incrementCost;
-    incrementCost *= 1.25;
+    incrementCost += 100;
   };
   update();
 };
@@ -60,7 +60,7 @@ criticalClickButton.onclick = function() {
   if (count >= criticalClickCost && criticalClickChance > 1) {
     count -= criticalClickCost;
     criticalClickChance /= 2;
-    criticalClickCost *= 5;
+    criticalClickCost += 1000;
   }
   update();
 };
@@ -80,7 +80,11 @@ function update() {
 function autoClickIntervalFunc() {
   clearInterval(autoClickInterval);
   autoClickInterval = setInterval(function() {
-    count += countIncrement * autoClicksPerSecond;
+    if (randomNumber(1, criticalClickChance) != 1) {
+      count += countIncrement * autoClicksPerSecond * 100;
+    } else {
+      count += countIncrement * autoClicksPerSecond;
+    };
     update();
   }, 1000);
 };
@@ -90,4 +94,4 @@ function randomNumber(x, y) {
 };
 
 autoClickIntervalFunc();
-debugMode(false);
+debugMode(true);
