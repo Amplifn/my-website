@@ -27,7 +27,7 @@ let autoClicksPerSecond = 0;
 let autoClickCost = 30;
 let autoClickInterval;
 let criticalClickChance = 100;
-let criticalClickCost = 200;
+let criticalClickCost = 1000;
 
 incrementButton.onclick = function() {
   if (count >= incrementCost) {
@@ -60,7 +60,7 @@ criticalClickButton.onclick = function() {
   if (count >= criticalClickCost && criticalClickChance > 1) {
     count -= criticalClickCost;
     criticalClickChance /= 2;
-    criticalClickCost *= 2;
+    criticalClickCost += 1000;
   }
   update();
 };
@@ -90,4 +90,4 @@ function randomNumber(x, y) {
 };
 
 autoClickIntervalFunc();
-debugMode(false);
+debugMode(true);
