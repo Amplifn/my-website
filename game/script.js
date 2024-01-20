@@ -81,9 +81,9 @@ function autoClickIntervalFunc() {
   clearInterval(autoClickInterval);
   autoClickInterval = setInterval(function() {
     if (randomNumber(1, criticalClickChance) != 1) {
-      count += countIncrement * autoClicksPerSecond * 100;
-    } else {
       count += countIncrement * autoClicksPerSecond;
+    } else {
+      count += countIncrement * autoClicksPerSecond * 100;
     };
     update();
   }, 1000);
