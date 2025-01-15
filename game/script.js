@@ -94,4 +94,4 @@ function randomNumber(x, y) {
 };
 
 autoClickIntervalFunc();
-debugMode(false);
+debugMode(true);
